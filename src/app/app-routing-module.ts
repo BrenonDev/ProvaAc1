@@ -5,6 +5,7 @@ import { CalcularMedia } from './calcular-media/calcular-media';
 import { ApoliceSeguro } from './apolice-seguro/apolice-seguro';
 import { ConversorTemperatura } from './conversor-temperatura/conversor-temperatura';
 import { CalcularImc } from './calcular-imc/calcular-imc';
+import { NotFound } from './not-found/not-found';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path: 'apolice-seguro', component: ApoliceSeguro},
   {path: 'conversor-temperatura', component: ConversorTemperatura},
   {path: 'calcular-imc', component: CalcularImc},
-  {path: '**', redirectTo: '/home', pathMatch: 'full'}
+  {path: '**', component: NotFound}
 ];
 
 @NgModule({

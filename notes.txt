@@ -22,10 +22,10 @@ ng serve --open
 -> Abrir no navegador http://localhost:4200/
 
 
-.ts   ->   interpolation {{}}   ->   .html
+.ts   =>      interpolation {{}}     =>   .html
 
-.ts   ->   property binding []  ->   .html
+.ts   =>      property binding []    =>   .html
 
-.ts   <-   event binding ()     <-   .html
+.ts   <=      event binding ()       <=   .html
 
-two way databinding
+.ts   <=>  two way databinding [()]  <=>  .html

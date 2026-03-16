@@ -10,12 +10,21 @@ import { CalcularMedia } from './calcular-media/calcular-media';
 import { ApoliceSeguro } from './apolice-seguro/apolice-seguro';
 import { ConversorTemperatura } from './conversor-temperatura/conversor-temperatura';
 import { CalcularImc } from './calcular-imc/calcular-imc';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { NotFound } from './not-found/not-found';
 
 @NgModule({
-  declarations: [App, Menu, Home, CalcularMedia, ApoliceSeguro, ConversorTemperatura, CalcularImc],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, NgbSlide,
-    FormsModule],
+  declarations: [
+    App,
+    Menu,
+    Home,
+    CalcularMedia,
+    ApoliceSeguro,
+    ConversorTemperatura,
+    CalcularImc,
+    NotFound,
+  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, NgbSlide, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

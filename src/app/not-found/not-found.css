@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  min-height: calc(100vh - 72px);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+}
+
+.page-shell {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.background-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+.blur-one {
+  width: 220px;
+  height: 220px;
+  background: #c7d2fe;
+  top: 12%;
+  left: 8%;
+}
+
+.blur-two {
+  width: 260px;
+  height: 260px;
+  background: #ddd6fe;
+  right: 8%;
+  bottom: 10%;
+}
+
+.not-found-card {
+  width: 100%;
+  max-width: 680px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  padding: 48px 28px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.code {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #4f46e5;
+  margin-bottom: 18px;
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+.description {
+  margin: 0 auto 28px;
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  text-decoration: none;
+  min-width: 220px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .not-found-card {
+    padding: 36px 20px;
+  }
+
+  .code {
+    font-size: 4rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .primary-btn {
+    width: 100%;
+  }
+}
