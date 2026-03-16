@@ -1,5 +1,9 @@
 # ProvaAc1
 
+## Integrantes
+Brenon Olivetti Rondello - RA: 248163
+Luiz Fernando de Souza Campos - RA: 240439
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
 
 ## Development server
