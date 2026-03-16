@@ -1,0 +1,32 @@
+<div class="page-shell">
+  <div class="background-blur blur-one"></div>
+  <div class="background-blur blur-two"></div>
+
+  <section class="home-card">
+    <div class="badge">Ferramenta Acadêmica e Utilitária</div>
+
+    <h1>{{ title }}</h1>
+    <p class="subtitle">
+      Uma interface moderna para cálculos essenciais do dia a dia, com navegação simples,
+      visual elegante e experiência responsiva.
+    </p>
+
+    <div class="actions">
+      <a class="primary-btn" routerLink="/calcular-media">Calcular Média</a>
+      <a class="secondary-btn" routerLink="/apolice-seguro">Apólice de Seguro</a>
+    </div>
+
+    <div class="actions actions-bottom">
+      <a class="secondary-btn" routerLink="/conversor-temperatura">Conversor de Temperatura</a>
+      <a class="secondary-btn" routerLink="/calcular-imc">Calculadora de IMC</a>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon">{{ feature.icon }}</div>
+        <h2>{{ feature.title }}</h2>
+        <p>{{ feature.description }}</p>
+      </article>
+    </div>
+  </section>
+</div>

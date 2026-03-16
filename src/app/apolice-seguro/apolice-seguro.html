@@ -1,0 +1,58 @@
+<div class="page-shell">
+  <div class="background-blur blur-one"></div>
+  <div class="background-blur blur-two"></div>
+
+  <section class="calculator-card">
+    <div class="header">
+      <span class="badge">Seguro Automobilístico</span>
+      <h1>Calculadora de Apólice</h1>
+      <p>Informe os dados do segurado para calcular o valor da apólice com base nas regras definidas.</p>
+    </div>
+
+    <div class="form-grid">
+      <div class="input-group full-width">
+        <label for="nome">Nome do segurado</label>
+        <input id="nome" type="text" [(ngModel)]="nome" placeholder="Digite o nome do segurado" />
+      </div>
+
+      <div class="input-group">
+        <label for="sexo">Sexo</label>
+        <select id="sexo" [(ngModel)]="sexo">
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="idade">Idade</label>
+        <input id="idade" type="number" [(ngModel)]="idade" placeholder="Digite a idade" />
+      </div>
+
+      <div class="input-group full-width">
+        <label for="valorAutomovel">Valor do automóvel</label>
+        <input id="valorAutomovel" type="number" [(ngModel)]="valorAutomovel" placeholder="Digite o valor do automóvel" />
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button type="button" (click)="calcularApolice()">Calcular</button>
+      <button type="button" class="ghost-btn" (click)="limpar()">Limpar</button>
+    </div>
+
+    <div class="result-box" *ngIf="valorApolice !== null">
+      <div class="result-item">
+        <span class="result-label">Segurado</span>
+        <span class="result-value">{{ nome }}</span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Percentual aplicado</span>
+        <span class="result-value">{{ percentualAplicado }}</span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Valor da apólice</span>
+        <span class="result-value">R$ {{ valorApolice }}</span>
+      </div>
+    </div>
+  </section>
+</div>

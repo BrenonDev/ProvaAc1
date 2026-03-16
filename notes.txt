@@ -1,0 +1,31 @@
+-> Após criar pasta do projeto, copiar o caminho e abrir no terminal:
+cd <caminho_do_projeto>
+
+-> Instalar Angular
+npm install -g @angular/cli
+
+-> Criar novo projeto
+ng new <nome_do_projeto> --standalone=false --routing
+
+-> Abrir pasta do projeto criado
+cd <caminho_do_projeto>
+
+-> Instalar Bootstrap
+ng add @ng-bootstrap/ng-bootstrap
+
+-> Criar componentes
+ng g c <nome_do_componente>
+
+-> Abrir projeto na web
+ng serve --open
+
+-> Abrir no navegador http://localhost:4200/
+
+
+.ts   ->   interpolation {{}}   ->   .html
+
+.ts   ->   property binding []  ->   .html
+
+.ts   <-   event binding ()     <-   .html
+
+two way databinding

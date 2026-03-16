@@ -1,0 +1,50 @@
+<div class="page-shell">
+  <div class="background-blur blur-one"></div>
+  <div class="background-blur blur-two"></div>
+
+  <section class="calculator-card">
+    <div class="header">
+      <span class="badge">Cálculo Acadêmico</span>
+      <h1>Calculadora da Média do Aluno</h1>
+      <p>Preencha as notas abaixo para calcular a média final e verificar a aprovação.</p>
+    </div>
+
+    <div class="form-grid">
+      <div class="input-group">
+        <label for="ac1">AC1</label>
+        <input id="ac1" type="number" [(ngModel)]="ac1" placeholder="Digite a nota da AC1" />
+      </div>
+
+      <div class="input-group">
+        <label for="ac2">AC2</label>
+        <input id="ac2" type="number" [(ngModel)]="ac2" placeholder="Digite a nota da AC2" />
+      </div>
+
+      <div class="input-group">
+        <label for="ag">AG</label>
+        <input id="ag" type="number" [(ngModel)]="ag" placeholder="Digite a nota da AG" />
+      </div>
+
+      <div class="input-group">
+        <label for="af">AF</label>
+        <input id="af" type="number" [(ngModel)]="af" placeholder="Digite a nota da AF" />
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button type="button" (click)="calcularMedia()">Calcular</button>
+      <button type="button" class="ghost-btn" (click)="limpar()">Limpar</button>
+    </div>
+
+    <div class="result-box" *ngIf="mediaFinal !== null">
+      <div class="result-item">
+        <span class="result-label">Média Final</span>
+        <span class="result-value">{{ mediaFinal }}</span>
+      </div>
+      <div class="result-item">
+        <span class="result-label">Situação</span>
+        <span class="status" [ngClass]="aprovado ? 'approved' : 'reproved'">{{ situacao }}</span>
+      </div>
+    </div>
+  </section>
+</div>

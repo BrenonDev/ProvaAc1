@@ -1,0 +1,34 @@
+<div class="page-shell">
+  <div class="background-blur blur-one"></div>
+  <div class="background-blur blur-two"></div>
+
+  <section class="calculator-card">
+    <div class="header">
+      <span class="badge">Conversão Térmica</span>
+      <h1>Conversor de Temperatura</h1>
+      <p>Digite a temperatura em graus Celsius para converter em Fahrenheit e Kelvin.</p>
+    </div>
+
+    <div class="form-grid">
+      <div class="input-group full-width">
+        <label for="celsius">Temperatura em Celsius</label>
+        <input id="celsius" type="number" [(ngModel)]="celsius" placeholder="Digite a temperatura em °C" />
+      </div>
+
+      <div class="input-group">
+        <label for="fahrenheit">Fahrenheit</label>
+        <input id="fahrenheit" type="text" [value]="fahrenheit" readonly />
+      </div>
+
+      <div class="input-group">
+        <label for="kelvin">Kelvin</label>
+        <input id="kelvin" type="text" [value]="kelvin" readonly />
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button type="button" (click)="converterTemperatura()">Converter</button>
+      <button type="button" class="ghost-btn" (click)="limpar()">Limpar</button>
+    </div>
+  </section>
+</div>

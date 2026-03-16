@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { NgbModule, NgbSlide } from '@ng-bootstrap/ng-bootstrap';
+import { Menu } from './menu/menu';
+import { Home } from './home/home';
+import { CalcularMedia } from './calcular-media/calcular-media';
+import { ApoliceSeguro } from './apolice-seguro/apolice-seguro';
+import { ConversorTemperatura } from './conversor-temperatura/conversor-temperatura';
+import { CalcularImc } from './calcular-imc/calcular-imc';
+import { FormsModule, NgModel } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    App
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
-  ],
-  bootstrap: [App]
+  declarations: [App, Menu, Home, CalcularMedia, ApoliceSeguro, ConversorTemperatura, CalcularImc],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, NgbSlide,
+    FormsModule],
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
